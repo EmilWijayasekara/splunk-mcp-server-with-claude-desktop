@@ -1,4 +1,5 @@
 
+![enter image description here](https://github.com/EmilWijayasekara/splunk-mcp-server-with-claude-desktop/blob/main/assets/1.jpg?raw=true)
 # Splunk MCP Bridge
 
 This project implements a Model Context Protocol (MCP) bridge that connects **Claude Desktop** to a **Splunk Management Endpoint**. It utilizes a custom-engineered Node.js JSON-RPC relay to bypass legacy protocol restrictions on Splunk Port 8089, enabling secure, real-time AI-driven log analysis.
@@ -6,6 +7,7 @@ This project implements a Model Context Protocol (MCP) bridge that connects **Cl
 ## Project Overview
 
 The core objective of this project is to transform Claude Desktop into a functional extension of the Splunk Search Head. By bridging these two platforms, users can perform complex data operations, such as multi-index correlative analysis and automated root-cause identification, using natural language instead of manual SPL coding.
+![enter image description here](https://github.com/EmilWijayasekara/splunk-mcp-server-with-claude-desktop/blob/main/assets/2.jpg?raw=true)
 
 ## Key Features
 
@@ -33,7 +35,7 @@ The implementation consists of three primary environments:
 
 ### 1. Infrastructure Setup
 
--   Provision a high-performance Ubuntu droplet (DigitalOcean).
+-   Provision a high-performance Ubuntu server.
     
 -   Deploy Docker and Portainer for container orchestration.
     
@@ -51,7 +53,7 @@ The implementation consists of three primary environments:
 
 ### 3. Security & Networking
 
--   Deploy **Nginx Proxy Manager** to map the internal Docker network to a secure domain (e.g., `splunk.alcatrez.me`).
+-   Deploy **Nginx Proxy Manager** to map the internal Docker network to a secure domain.
     
 -   Enforce TLS 1.3 encryption for all transit data.
     
@@ -61,7 +63,7 @@ The implementation consists of three primary environments:
 -   Configure Claude Desktop's `config.json` to launch the `splunk_mcp_bridge.mjs` relay.
     
 -   Verify the handshake by confirming Claude recognizes the `splunk-mcp-server` connector.
-    
+    ![enter image description here](https://github.com/EmilWijayasekara/splunk-mcp-server-with-claude-desktop/blob/main/assets/3.png?raw=true)
 
 ## Future Works
 
